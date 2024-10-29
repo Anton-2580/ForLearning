@@ -1,4 +1,4 @@
-package com.example.noteappwsr_preparation.presentation
+package com.example.noteappwsr_preparation.presentation.notes
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
