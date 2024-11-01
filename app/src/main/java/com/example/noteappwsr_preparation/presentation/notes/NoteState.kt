@@ -1,4 +1,4 @@
-package com.example.noteappwsr_preparation.presentation
+package com.example.noteappwsr_preparation.presentation.notes
 
 import com.example.noteappwsr_preparation.data.model.Note
 import com.example.noteappwsr_preparation.domain.util.NoteOrder

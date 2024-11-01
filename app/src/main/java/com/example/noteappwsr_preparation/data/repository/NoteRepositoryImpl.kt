@@ -1,6 +1,6 @@
 package com.example.noteappwsr_preparation.data.repository
 
-import android.database.sqlite.SQLiteException
+
 import com.example.noteappwsr_preparation.data.db_source.NoteDao
 import com.example.noteappwsr_preparation.data.model.Note
 import com.example.noteappwsr_preparation.domain.repository.NoteRepository

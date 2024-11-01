@@ -1,4 +1,4 @@
-package com.example.noteappwsr_preparation.presentation.components
+package com.example.noteappwsr_preparation.presentation.notes.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -9,23 +9,25 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.noteappwsr_preparation.presentation.NotesViewModel
+import androidx.navigation.NavController
+import com.example.noteappwsr_preparation.presentation.notes.NotesViewModel
 
 
 @Composable
 fun GridNotes(
     viewModel: NotesViewModel,
-    isDelete: MutableState<Boolean>,
+    navController: NavController,
+    snackbarHostState: SnackbarHostState,
     modifier: Modifier = Modifier
 ) {
     LazyVerticalGrid(
@@ -55,7 +57,7 @@ fun GridNotes(
                         overflow = TextOverflow.Ellipsis
                     )
 
-                    ControlNote(viewModel, it, isDelete)
+                    ControlNote(viewModel, navController, it, snackbarHostState)
                 }
             }
         }

@@ -1,4 +1,4 @@
-package com.example.noteappwsr_preparation.presentation
+package com.example.noteappwsr_preparation.presentation.notes
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -7,6 +7,7 @@ import com.example.noteappwsr_preparation.data.model.Note
 import com.example.noteappwsr_preparation.domain.use_case.NoteUseCases
 import com.example.noteappwsr_preparation.domain.util.NoteOrder
 import com.example.noteappwsr_preparation.domain.util.OrderType
+import com.example.noteappwsr_preparation.presentation.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
@@ -66,11 +67,5 @@ class NotesViewModel @Inject constructor(
                 noteOrder = noteOrder
             )
         }.launchIn(viewModelScope)
-    }
-
-    fun addNote(note: Note) {
-        handleError {
-            noteUseCases.addNote(note)
-        }
     }
 }

@@ -1,10 +1,8 @@
 package com.example.noteappwsr_preparation.domain.repository
 
-
-import android.database.sqlite.SQLiteException
 import com.example.noteappwsr_preparation.data.model.Note
 import kotlinx.coroutines.flow.Flow
-import kotlin.jvm.Throws
+
 
 interface NoteRepository {
 

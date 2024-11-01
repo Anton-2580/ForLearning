@@ -1,4 +1,4 @@
-package com.example.noteappwsr_preparation.presentation.components
+package com.example.noteappwsr_preparation.presentation.notes.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.RadioButton
