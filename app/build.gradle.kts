@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -52,6 +53,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.kotlin.reflect)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -72,13 +74,13 @@ dependencies {
     // Hilt DI
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-    implementation(libs.androidx.hilt.lifecycle.viewmodel)
-    implementation(libs.androidx.hilt.compiler)
+    kapt(libs.androidx.hilt.compiler)
 
     // Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.compose.hilt.navigation)
+    implementation(libs.kotlinx.serialization.json)
 
     // Coroutines
     implementation(libs.coroutines.core)
